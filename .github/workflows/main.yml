@@ -2,8 +2,8 @@ name: Radar Diário de Eventos TI
 
 on:
   schedule:
-    # Roda de segunda a sexta-feira, às 11:00 UTC (que equivale às 08:00 no Brasil)
-    - cron: '0 11 * * 1-5'
+    # Agora roda TODOS OS DIAS (segunda a domingo), às 11:00 UTC (08:00 BRT)
+    - cron: '0 11 * * *'
   workflow_dispatch: # Permite que você aperte um botão para rodar manualmente quando quiser
 
 permissions:
