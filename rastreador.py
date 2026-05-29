@@ -88,6 +88,7 @@ def filtrar_com_gemini(eventos_brutos):
     2. Remova anúncios patrocinados genéricos, vagas de emprego ou cursos básicos.
     3. Mantenha APENAS eventos técnicos de alto nível, workshops, summits ou meetups focados em: Cloud (OCI, AWS, Azure), Engenharia de Dados, Data Lakes, Inteligência Artificial, Agentes Autônomos e Governança/Regulação.
     4. Formate a resposta final em HTML limpo, usando uma lista (<ul> e <li>), destacando em negrito (<b>) o nome do evento, seguido de uma breve descrição do porquê é relevante para a área, e o link clicável.
+    5. REGRA ESTRITA DE SAÍDA: Retorne ABSOLUTAMENTE APENAS as tags HTML da lista (<ul> e <li>). NÃO escreva saudações, NÃO explique suas decisões, NÃO escreva introduções ou conclusões.
     
     Aqui está a lista bruta:
     {texto_bruto}
