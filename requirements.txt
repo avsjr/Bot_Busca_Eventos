@@ -1,0 +1,4 @@
+google-search-results
+google-genai
+python-dotenv
+requests
