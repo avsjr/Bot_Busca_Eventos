@@ -1,0 +1,40 @@
+name: Radar Diário de Eventos TI
+
+on:
+  schedule:
+    # Roda de segunda a sexta-feira, às 11:00 UTC (que equivale às 08:00 no Brasil)
+    - cron: '0 11 * * 1-5'
+  workflow_dispatch: # Permite que você aperte um botão para rodar manualmente quando quiser
+
+permissions:
+  contents: write # Permissão obrigatória para o robô poder salvar o historico.txt de volta
+
+jobs:
+  executar_robo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar Bibliotecas (requirements)
+        run: pip install -r requirements.txt
+
+      - name: Rodar o Rastreador (O Motor)
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        run: python rastreador.py
+
+      - name: Salvar Memória (Commit do historico.txt)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Atualização automática da memória do robô (Histórico de Eventos)"
+          file_pattern: "historico.txt"
