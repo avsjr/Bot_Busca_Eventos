@@ -95,7 +95,7 @@ def filtrar_com_gemini(eventos_brutos):
     """
     
     resposta = cliente_gemini.models.generate_content(
-        model='gemini-2.0-flash', 
+        model='gemini-3.5-flash', 
         contents=prompt
     )
     
