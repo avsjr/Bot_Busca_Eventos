@@ -94,9 +94,9 @@ def filtrar_com_gemini(eventos_brutos):
     {texto_bruto}
     """
     
-    resposta = cliente_gemini.models.generate_content(
-        model='gemini-2.5-flash'
-        contents=prompt
+    resposta = client.generate_content(
+        contents="Buscar eventos de tecnologia",
+        model='gemini-2.0-flash' 
     )
     
     return resposta.text
