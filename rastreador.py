@@ -75,6 +75,7 @@ def buscar_eventos_tecnologia():
     return eventos_brutos
 
 # 4. Função do Gemini
+# 4. Função do Gemini (CORRIGIDA)
 def filtrar_com_gemini(eventos_brutos):
     print("Processando dados com o Gemini...")
     
@@ -94,9 +95,12 @@ def filtrar_com_gemini(eventos_brutos):
     {texto_bruto}
     """
     
-    resposta = client.generate_content(
-        contents="Buscar eventos de tecnologia",
-        model='gemini-2.0-flash' 
+    # 1. Usa a variável correta: cliente_gemini
+    # 2. Usa a sintaxe correta da nova SDK: models.generate_content
+    # 3. Passa a variável 'prompt' que contém a lista e as regras
+    resposta = cliente_gemini.models.generate_content(
+        model='gemini-2.0-flash',
+        contents=prompt
     )
     
     return resposta.text
