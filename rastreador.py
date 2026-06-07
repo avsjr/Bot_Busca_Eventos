@@ -82,18 +82,36 @@ def filtrar_com_gemini(eventos_brutos):
     texto_bruto = "\n".join([f"- Título: {e['titulo']}\n  Descrição: {e['descricao']}\n  Link: {e['link']}\n" for e in eventos_brutos])
     
     prompt = f"""
-    Atue como um Analista Sênior de Tecnologia auxiliando um Engenheiro de Dados e Especialista em Cloud.
-    Eu fiz uma varredura na web buscando eventos relevantes de tecnologia. 
-    Analise a lista bruta abaixo e faça o seguinte:
-    1. Remova eventos que não sejam do Brasil.
-    2. Remova anúncios patrocinados genéricos, vagas de emprego ou cursos básicos.
-    3. Mantenha APENAS eventos técnicos de alto nível, workshops, summits ou meetups focados em: Cloud (OCI, AWS, Azure), Engenharia de Dados, Data Lakes, Inteligência Artificial, Agentes Autônomos e Governança/Regulação.
-    4. Formate a resposta final em HTML limpo, usando uma lista (<ul> e <li>), destacando em negrito (<b>) o nome do evento, seguido de uma breve descrição do porquê é relevante para a área, e o link clicável.
-    5. REGRA ESTRITA DE SAÍDA: Retorne ABSOLUTAMENTE APENAS as tags HTML da lista (<ul> e <li>). NÃO escreva saudações, NÃO explique suas decisões, NÃO escreva introduções ou conclusões.
-    
-    Aqui está a lista bruta:
-    {texto_bruto}
-    """
+        Atue como um Analista Sênior de Tecnologia auxiliando um Engenheiro de Dados e Especialista em Cloud.
+        Eu fiz uma varredura na web buscando eventos relevantes de tecnologia. 
+        Analise a lista bruta abaixo e faça o seguinte:
+        
+        [CRITÉRIOS DE APROVAÇÃO]
+        1. Mantenha APENAS eventos técnicos de alto nível, workshops, summits ou meetups focados em: Cloud, Engenharia de Dados, Data Lakes, Inteligência Artificial, Agentes Autônomos e Governança.
+        2. Eventos no Brasil são prioridade.
+        3. ATENÇÃO: Links de redes sociais (como vídeos do Instagram) SÃO PERMITIDOS, desde que o conteúdo seja claramente o anúncio ou a divulgação de um evento válido dos temas acima.
+        
+        [CRITÉRIOS DE REJEIÇÃO]
+        4. Remova anúncios patrocinados genéricos.
+        5. Remova vagas de emprego.
+        6. Remova cursos básicos, tutoriais estáticos ou vídeos de demonstração de produto (ex: demonstrações de software).
+        
+        [FORMATO DE SAÍDA - REGRA ESTRITA]
+        Retorne ABSOLUTAMENTE APENAS as tags HTML solicitadas abaixo. NÃO escreva saudações ou textos fora das tags.
+        
+        <ul>
+          <li><b>[Nome do Evento]</b>: [Breve descrição do porquê é relevante] - <a href="[Link]">Link</a></li>
+        </ul>
+        
+        <br><hr><br>
+        <h3>Auditoria de Exclusões:</h3>
+        <ul>
+          <li><del>[Título Original]</del> - <i>Motivo: [Por que foi rejeitado segundo os critérios]</i></li>
+        </ul>
+        
+        Aqui está a lista bruta:
+        {texto_bruto}
+        """
     
     # 1. Usa a variável correta: cliente_gemini
     # 2. Usa a sintaxe correta da nova SDK: models.generate_content
