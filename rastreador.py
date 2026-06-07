@@ -157,6 +157,12 @@ if __name__ == "__main__":
             
             if eventos_ineditos:
                 print(f"Oba! Temos {len(eventos_ineditos)} eventos inéditos hoje.")
+                              
+                print("\n=== LISTA BRUTA ENVIADA PARA O GEMINI ===")
+                for e in eventos_ineditos:
+                    print(f"-> {e['titulo']}")
+                    print(f"   Link: {e['link']}")
+                print("=========================================\n")
                 
                 html_eventos = filtrar_com_gemini(eventos_ineditos)
                 
