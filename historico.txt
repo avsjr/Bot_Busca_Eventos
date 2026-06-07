@@ -30,3 +30,6 @@ https://www.dio.me/bootcamp
 https://learn.microsoft.com/pt-br/fabric/real-time-hub/business-events/business-events-overview
 https://promo.thedevconf.com/sumiabra-microsoft
 https://www.instagram.com/reel/DXFlOcRjodK/
+https://www.instagram.com/reel/DUEM_q3AQYo/
+https://promo.thedevconf.com/sumiasp-microsoft
+https://www.databricks.com/br/resources/demos/videos/data-engineering/databricks-data-intelligence-platform
