@@ -143,6 +143,7 @@ def enviar_email(html_eventos):
         print("E-mail enviado com sucesso! Verifique a sua caixa de entrada (e a pasta de SPAM).")
     except Exception as e:
         print(f"Erro ao enviar o e-mail: {e}")
+        raise e  # O GitHub Actions agora ficará VERMELHO se cair aqui
 
 # 6. O Bloco Principal
 if __name__ == "__main__":
