@@ -2,12 +2,16 @@ name: Radar Diário de Eventos TI
 
 on:
   schedule:
-    # Agora roda TODOS OS DIAS (segunda a domingo), às 11:00 UTC (08:00 BRT)
-    - cron: '0 11 * * *'
-  workflow_dispatch: # Permite que você aperte um botão para rodar manualmente quando quiser
+    - cron: '0 8 * * *' # Exemplo do seu agendamento
+  workflow_dispatch:
 
+# Variavel global para remover o aviso do Node 20
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+# Permissão obrigatória para o robô poder salvar o historico.txt de volta
 permissions:
-  contents: write # Permissão obrigatória para o robô poder salvar o historico.txt de volta
+  contents: write 
 
 jobs:
   executar_robo:
