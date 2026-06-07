@@ -99,7 +99,7 @@ def filtrar_com_gemini(eventos_brutos):
     # 2. Usa a sintaxe correta da nova SDK: models.generate_content
     # 3. Passa a variável 'prompt' que contém a lista e as regras
     resposta = cliente_gemini.models.generate_content(
-        model='gemini-2.0-flash',
+        model='gemini-2.5-flash',
         contents=prompt
     )
     
