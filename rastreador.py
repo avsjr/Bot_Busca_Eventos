@@ -45,11 +45,11 @@ def buscar_eventos_tecnologia():
     url = "https://serpapi.com/search"
     
     params = {
-      "q": "(evento OR congresso OR meetup OR 'deep dive' OR summit) AND (tecnologia OR 'inteligência artificial' OR 'AI' OR OCI OR AWS OR 'Microsoft'OR 'IA')",
+      "q": "(evento OR congresso OR meetup OR 'deep dive' OR summit OR event OR bootcamp OR imersão OR Conferência OR Fórum OR Simpósio OR palestra ) AND (tecnologia OR 'inteligência artificial' OR 'AI'OR Databricks OR GCP OR 'Microsoft Fabric' OR OCI OR AWS OR 'Microsoft'OR 'IA' OR 'Data Lake' OR 'Data Warehouse' OR Python OR Google OR 'Google Cloude Plataform' OR Snowflake OR Oracle OR 'Oracle Cloud Infraesctuture')",
       "location": "Brazil",
       "hl": "pt",
       "gl": "br",
-      "num": 50, 
+      "num": 100, 
       "api_key": SERPAPI_KEY
     }
 
