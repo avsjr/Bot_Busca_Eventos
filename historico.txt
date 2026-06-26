@@ -65,3 +65,4 @@ https://translate.google.com/translate?u=https://www.databricks.com/company/news
 https://pt.linkedin.com/posts/sandrabozolan_quando-se-fala-em-evento-de-intelig%C3%AAncia-activity-7427324459780521984-cL5f
 https://blog.dsacademy.com.br/tag/deep-learning/
 https://learn.microsoft.com/pt-br/shows/ai-show/demystifying-ai
+https://www.instagram.com/p/DZN_Tt9gUMF/
