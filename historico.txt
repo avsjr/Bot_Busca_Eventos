@@ -77,3 +77,4 @@ https://www.instagram.com/reel/DN8sAUGDZwO/
 https://www.qlik.com/pt-br/news/company/press-room/press-releases/qlik-presents-solutions-with-artificial-intelligence-and-auccess-stories-during-the-gartner-data-and-analytics-2025-conference
 https://developer.microsoft.com/pt-br/reactor/series/s-1455/
 https://www.dataex.com.br/dataex-e-microsoft-incentivam-a-inovacao-digital/
+https://www.databricks.com/br/blog/aws-and-databricks-data-ai-summit-2026-accelerating-real-world-ai-innovation
