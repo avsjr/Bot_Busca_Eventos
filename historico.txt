@@ -109,3 +109,5 @@ https://bigdatanavigators.com/eventos/
 https://www.google.com/goto?url=CAESYwHuR6pN6vnWYwug6VbCC5O4TgVD19TKn9NpUhdWbpkuFkZyA8JtFILLin_F7VhkQ4BVqiygYYEsQJ4ZUSDZPy6VRn7YniYnX_Wn5OOwtzAo0Lt5FhNto-j9q97v4kx34b4m6w==
 https://www.google.com/goto?url=CAESYwHuR6pNEm9ZNK8UH6o6ZYEAnI_vQihKHlDbhsUoSoxh5bH34-eSw-mpCkHxDGVPbR37mCjCTwObphBpUBDFM5YUi-ZtNXeT2vaMK6_UgMVcgFJFJ91Hh1zkdqngh7x-OOm3hA==
 https://developer.microsoft.com/pt-br/reactor/series/S-1332/
+https://learn.microsoft.com/pt-br/fabric/fundamentals/whats-new
+https://translate.google.com/translate?u=https://www.datacamp.com/blog/top-business-intelligence-conferences&hl=pt&sl=en&tl=pt&client=srp
